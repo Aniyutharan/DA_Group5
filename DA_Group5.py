@@ -57,3 +57,15 @@ class BrickSetSpider(scrapy.Spider):
 # Source reference from "Lab 10c - Using Scrapy webcrawler"
 # ~Zi Xuan
 # ----------------------------------------------------------------------------------------------------------------------
+
+
+import unittest
+
+class DA_Group5(unittest.Testcase):
+
+    def test_EngineType(self):
+        print("Testing")
+
+if __name__ == '__main__':
+    unittest.main()
+    
