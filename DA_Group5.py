@@ -45,7 +45,7 @@ class BrickSetSpider(scrapy.Spider):
                 'Image Link': x.xpath(newsel).extract_first(),
             }
 # T6 iii
-# scrapy runspider DA_Group5.py -o resultes.json -t json
+# scrapy runspider DA_Group5.py -o results.json -t json
 # T7
         Page_selector = '.next a ::attr(href)'
         next_page = response.css(Page_selector).extract_first()
@@ -57,15 +57,18 @@ class BrickSetSpider(scrapy.Spider):
 # Source reference from "Lab 10c - Using Scrapy webcrawler"
 # ~Zi Xuan
 # ----------------------------------------------------------------------------------------------------------------------
-
-
+# T3
 import unittest
-
-class DA_Group5(unittest.Testcase):
-
-    def test_EngineType(self):
-        print("Testing")
-
+# T8
+class TestingHeader(unittest.TestCase):
+    headers = {'User-Agent': 'Mobile'}
+    url2 = 'http://httpbin.org/headers'
+    rh = requests.get(url2, headers=headers)
+    print(rh.text)
+    def test_headers(self):
+        self.assertTrue(TestingHeader.headers, 'Mobile')
 if __name__ == '__main__':
     unittest.main()
-    
+# Source reference from "Lab 8 - Unit-Testing"
+# ~Xin Yi
+# ----------------------------------------------------------------------------------------------------------------------
